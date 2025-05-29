@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AulaLibre</title>
-  <link rel="stylesheet" href="estudiante.css">
+  <link rel="stylesheet" href="css/estudiante.css">
 </head>
 <body>
   <div class="container">
@@ -22,9 +22,13 @@
       if (seccion === 'cursos') {
         div.innerHTML = '<h3>Mis cursos</h3><p>No has iniciado ningún curso aún.</p>';
       } else if (seccion === 'disponibles') {
-        div.innerHTML = '<h3>Cursos disponibles</h3><ul><li>Pintura al óleo</li><li>Danza contemporánea</li></ul>';
+        div.innerHTML = `<div class='card'>
+          <h3>Violín Para Principiantes</h3>
+          <p>Aprende desde lo básico hasta técnicas avanzadas.</p>
+          <button onclick="window.location.href='violin.html'">Inscribir</button>
+        </div>`;
       } else if (seccion === 'certificaciones') {
-        div.innerHTML = '<h3>Certificaciones</h3><a href="certificado.pdf" download>Descargar certificado</a>';
+        div.innerHTML = '<h3>Certificaciones</h3><a href="recursos/CERTIFICATE.pdf" download>Descargar certificado</a>';
       }
     }
   </script>
