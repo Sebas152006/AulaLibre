@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel Estudiante</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Bienvenido/a, Estudiante</h2>
+    <button onclick="mostrar('cursos')">Mis cursos</button>
+    <button onclick="mostrar('disponibles')">Cursos disponibles</button>
+    <button onclick="mostrar('certificaciones')">Mis certificaciones</button>
+
+    <div id="contenido"></div>
+  </div>
+
+  <script>
+    function mostrar(seccion) {
+      const div = document.getElementById('contenido');
+      if (seccion === 'cursos') {
+        div.innerHTML = '<h3>Mis cursos</h3><p>No has iniciado ningún curso aún.</p>';
+      } else if (seccion === 'disponibles') {
+        div.innerHTML = '<h3>Cursos disponibles</h3><ul><li>Pintura al óleo</li><li>Danza contemporánea</li></ul>';
+      } else if (seccion === 'certificaciones') {
+        div.innerHTML = '<h3>Certificaciones</h3><a href="certificado.pdf" download>Descargar certificado</a>';
+      }
+    }
+  </script>
+</body>
+</html>
